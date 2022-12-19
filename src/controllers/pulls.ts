@@ -4,9 +4,12 @@ const router = express.Router()
 import pullsService from '../services/pulls'
 import commitsService from '../services/commits'
 
+import validUrl from '../utils/validUrl'
+import httpErrorHandler from '../utils/httpErrorHandler'
+
 import { Pull } from '../interface/Pull'
 
-router.get('/', async (req, res) => {
+router.get('/', validUrl, async (req, res) => {
   try {
     const { repositoryUrl = '' } = req.query
     const { authorization = '' } = req.headers
@@ -37,7 +40,14 @@ router.get('/', async (req, res) => {
 
     res.send(formattedResponse)
   } catch(error) {
-    res.status(500).send('unable to get prs')
+    let statusCode = 500
+    let publicMessage = 'Something went wrong...'
+
+    if (error instanceof Error) {
+      statusCode = httpErrorHandler(error.message)
+    }
+
+    res.status(statusCode).send(publicMessage)
   }
 })
 
