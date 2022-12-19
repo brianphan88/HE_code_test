@@ -1,8 +1,6 @@
 import path from 'path'
 import express, { Request, Response, NextFunction} from 'express'
 
-import httpErrorHandler from './utils/httpErrorHandler'
-
 import pulls from './controllers/pulls'
 import auth from './controllers/auth'
 
