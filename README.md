@@ -21,4 +21,4 @@ i took a minimalist approach without leveraging too many libraries or frameworks
 
 ## How to use the api
   * Postman
-  ![alt text](./how-to-use.PNG "Logo Title Text 1")
+  ![alt text](./how-to-use.PNG "How to use")
