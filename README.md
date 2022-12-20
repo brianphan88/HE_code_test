@@ -3,6 +3,9 @@
 ## Intro
 i took a minimalist approach without leveraging too many libraries or frameworks to complete this project. my reasoning for this is to demonstrate my baseline understanding of node, express, js/ts, and the lightweight implementation could be understood by all levels of reviewers. the libs and frameworks i did choose to use are generally recognized by the javascript community. i would have chosen nestjs if i were looking for something more robust and opinionated. i hope you enjoy reviewing my code
 
+## Video demo 
+ * https://www.loom.com/share/38444752b1b847c4bf5ad94617b058af
+
 ## Todos
   * Swagger/OpenAPI documentation
   * add helpful logging and error message for observability
@@ -21,4 +24,5 @@ i took a minimalist approach without leveraging too many libraries or frameworks
 
 ## How to use the api
   * Postman
+
   ![alt text](./how-to-use.PNG "How to use")
